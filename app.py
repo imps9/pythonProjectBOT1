@@ -35,8 +35,8 @@ def convert(message: telebot.types.Message):
         bot.reply_to(message, f'Не удалось обработать команду \n{e}')
 
     else:
-        sum_val = int(amount)*total_base
-        text = f'Цена {amount} {quote} в {base} - {sum_val}'
+        multiplier_val = int(amount)*total_base
+        text = f'Цена {amount} {quote} в {base} - {multiplier_val}'
         bot.send_message(message.chat.id, text)
 
 bot.polling()
